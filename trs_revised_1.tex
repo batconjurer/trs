@@ -1,0 +1,529 @@
+\documentclass[twocolumn,superscriptaddress]{revtex4-1} 
+%removed 'twocolumn' just to see what's happening for the writeup better 
+
+%begin our macros
+\usepackage{graphicx}
+\usepackage{hyperref}
+% \usepackage{stmaryrd}
+\usepackage{subfig}
+\usepackage{amsmath}
+\usepackage{mathrsfs} 
+\usepackage{amsfonts}
+\usepackage{amssymb}%
+\setcounter{MaxMatrixCols}{30}
+\usepackage{amsthm}
+% \usepackage[foot]{amsaddr}
+\usepackage{amscd}
+\usepackage{verbatim}
+\usepackage{url}
+%  \usepackage{mathabx}
+ \usepackage{dsfont}
+ \usepackage[all]{xypic} 
+\usepackage{endnotes}
+\usepackage{enumerate}
+% \usepackage{datetime}
+\usepackage{mathtools}
+\usepackage{comment}
+%\usepackage{pstricks}
+\usepackage[latin1]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usepackage{color}
+ %\usepackage{tikzpicture}
+%usepackage[tiling]{pst-fill}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\mcA}{\mathcal{A}}
+\newcommand{\mcM}{\mathcal{M}}
+\newcommand{\mcC}{\mathcal{C}}
+\newcommand{\mcN}{\mathcal{N}}
+\newcommand{\mcL}{\mathcal{L}}
+\newcommand{\mcD}{\mathcal{D}}
+\newcommand{\mcK}{\mathcal{K}}
+\newcommand{\mcS}{\mathcal{S}}
+\newcommand{\mcP}{\mathcal{P}}
+\newcommand{\scrG}{\mathscr{G}}
+\newcommand{\scrJ}{\mathscr{J}}
+\newcommand{\scrP}{\mathscr{P}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\TT}{\mathbb{T}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\FF}{\mathbb{F}}
+\newcommand{\y}{\mathbf{y}} 
+\newcommand{\ff}{\mathbf{f}}
+\newcommand{\bfg}{\mathbf{g}}
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\h}{\mathbf{h}}
+\newcommand{\isom}{\cong}
+\newcommand{\w}{\mathbf{w}}
+\newcommand{\ot}{\otimes}
+\newcommand{\by}{\! \times \!}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\rae}{\!\rightarrow\!}
+\newcommand{\Sec}{\operatorname{Sec}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\Spin}{\operatorname{Spin}}
+\newcommand{\val}{\operatorname{val}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\PGL}{\operatorname{PGL}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\cod}{\operatorname{cod}}
+\newcommand{\dom}{\operatorname{dom}}
+\newcommand{\sign}{\operatorname{sign}}
+\newcommand{\Vect}{{\rm Vect}}
+\newcommand{\fdVect}{\Vect}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\argmax}{\operatorname{argmax}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\indep}{\perp \!\!\! \perp}
+\newcommand{\ceil}[1]{\ensuremath{\lceil #1 \rceil}}
+\newcommand{\floor}[1]{\ensuremath{\lfloor #1 \rfloor}}
+\newcommand{\PS}{\C\{\!\{t\}\!\}}
+\newcommand{\Sn}{\mathbb{S}}
+\newcommand {\TP} {\mathbb{TP}}
+\newcommand{\un}{\underline{n}}
+\newcommand{\on}{\bar{n}}
+\newcommand{\sPf}{\operatorname{sPf}}
+\newcommand{\sPfd}{\operatorname{sPf}^{\vee}}
+\newcommand{\Pf}{\operatorname{Pf}}
+\newcommand{\sDet}{\operatorname{sDet}} 
+\newcommand{\sPDet}{\operatorname{sPDet}} 
+\newcommand{\sPDetd}{\operatorname{sPDet}^{\vee}} 
+\newcommand{\Mat}{\operatorname{Mat}}
+\newcommand{\MaxsDet}{\operatorname{MaxsDet}}
+\newcommand{\union}{\cup}
+\newcommand{\Pol}{\operatorname{Pol}}
+\newcommand{\Inv}{\operatorname{Inv}}
+\newcommand{\unit}{\mathds{1}}%{1\!\!1}
+\newcommand{\Ob}{\text{Ob}}
+\newcommand{\Mor}{\text{Mor}}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\NAND}{\operatorname{NAND}}
+\newcommand{\msP}{\mathscr{P}}
+\newcommand{\msPR}{\mathcal{PR}}
+\newcommand{\tn}{\textnormal}
+\newcommand{\MFP}{\mathsf{MFP}}
+\newcommand{\sMP}{\mathsf{\#MP}}
+\newcommand{\End}{\textnormal{End}}
+\newcommand{\ott}{\bigotimes}
+\newcommand{\B}{\big}
+\newcommand{\bb}{\bigg}
+\newcommand{\op}{\oplus}
+\newcommand{\bop}{\bigoplus}
+\newcommand{\Tr}{\textnormal{Tr}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\spec}{\textnormal{Spec}}
+\newcommand{\actson}{\curvearrowright}
+
+\newcommand{\bra}[1]{\mbox{$\langle #1|$}}
+\newcommand{\ket}[1]{\mbox{$|#1\rangle$}}
+\newcommand{\braket}[2]{\mbox{$\langle #1,#2\rangle$}}
+\newcommand{\ketbra}[2]{\mbox{$|#1\rangle\langle #2|$}}
+\newcommand{\projector}[1]{\mbox{$|#1\rangle\langle #1|$}}
+\newcommand{\orr}[1]{\overrightarrow{#1}}
+\newcommand{\borr}[1]{\overrightarrow{\textbf{#1}}}
+% \newcommand{\Mat}{\operatorname{Mat}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{problem}[theorem]{Problem}
+\theoremstyle{definition}
+\newtheorem{defn}[theorem]{Definition}%[section]
+\theoremstyle{definition}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{definition}
+\newtheorem{notation}[theorem]{Notation}
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{definition}
+\newtheorem{algorithm}{Algorithm}
+\theoremstyle{definition}
+\newtheorem{question}[theorem]{Question}
+
+
+%\usepackage[dvipsnames]{xcolor}
+\usepackage[textsize=small]{todonotes}
+%%%%%%% http://tug.ctan.org/tex-archive/macros/latex/contrib/todonotes/todonotes.pdf
+
+%Some shortcuts added for edits
+% \usepackage{ulem}
+\definecolor{dred}{rgb}{.8,0.2,.2}
+\definecolor{ddred}{rgb}{.8,0.5,.5}
+\definecolor{dblue}{rgb}{.2,0.2,.8}
+% suggested change
+\newcommand{\add}[1]{\textcolor{dred}{*#1*}} 
+% \usepackage{ulem}
+\newcommand{\out}[1]{\textcolor{ddred}{\textbf{[}\sout{#1}\textbf{]}}}
+% comment or remark
+% \newcommand{\yo}[1]{\textcolor{dblue}{\textbf{[}#1\textbf{]}}}
+% %\newcommand{\todo}[1]{\textbf{\underline{\textcolor{dblue}{\textbf{[}#1\textbf{]}}}}}
+% 
+% \newcommand{\jb}[1]{\textcolor{dblue}{\textbf{[}JB: #1\textbf{]}}}
+\newcommand{\yo}[1]{\todo{{\textbf{[}JB: #1\textbf{]}}}}
+\newcommand{\jb}[1]{\todo[inline]{{\textbf{[}JB: #1\textbf{]}}}}
+\newcommand{\jt}[1]{\todo[inline]{\textcolor{dblue}{\textbf{[}JT: #1\textbf{]}}}}
+%end our macros
+
+\bibliographystyle{unsrt}
+
+\begin{document}
+\title{Classification of graphs admitting time-asymmetric quantum walks}
+ \author{Jacob Biamonte}\email{jacob.biamonte@qubit.org}\homepage{www.QuamPlexity.org}  
+\affiliation{Quantum Complexity Science Initiative \\ Department of Physics, University of Malta, MSD 2080 Malta}
+\affiliation{Institute for Quantum Computing \\ University of Waterloo, Waterloo, N2L 3G1 Ontario, Canada}
+
+\author{Jacob Turner}\email{j.w.turner@uva.nl} 
+\affiliation{Korteweg-de Vries Institute for Mathematics\\ University of Amsterdam, 1098 XG Amsterdam, Netherlands}
+\affiliation{Quantum Complexity Science Initiative \\ Department of Physics, University of Malta, MSD 2080 Malta} 
+%  \begin{center}
+%  \textsuperscript{1}\small{ISI Foundation, Via Alassio 11/c 10126 Torino Italy}
+% \par
+%    \textsuperscript{2}\small{Korteweg-de Vries Institute for Mathematics, University of Amsterdam, 1098 XG Amsterdam, Netherlands.}\par \bigskip
+% \end{center}
+\begin{abstract}
+{\bf The physical implications of time-reversal symmetry theory have long played a role of importance from condensed matter physics
+to thermodynamics. Recent work has discovered a host of new implications this effect has on quantum information science. 
+% Including the modulated breaking of time-reversal symmetry as a passive means to control the transition probability under unitary quantum evolution, dubbed `chiral' quantum walks. 
+% It has also been shown that such time-asymmetric quantum walks offer the mathematical non-equivalence between adiabatic quantum search and search by quantum walks and that many typical circuits of quantum information science were found to exhibit time-asymmetry.  
+Here we provide a full classification of the graphs which enable the breaking of time-reversal symmetry in their induced transition properties between basis elements in a preferred site-basis.  Our results are furthermore proven in terms of the geometry of the corresponding Hamiltonian support graph. The effect can only be present if the underlying support graph is not bipartite. We also show that certain bipartite graphs give rise to transition probability suppression, but not broken time-reversal symmetry. These results fill an important missing gap in understanding the role this omnipresent effect has in quantum information science. We also make partial progress in the problem of classifying which particular Hamiltonians define time-symmetric chiral quantum walks.}  
+\end{abstract}
+
+\maketitle 
+%\section{Introduction}
+\section{Introduction}
+The control of probability transfer in quantum evolutions is a fundamental requirement required in emerging quantum technologies~\cite{Lanyon2010towards, nv_opt2013}.  Quantum walks \cite{kempe2003quantum,venegas2012quantum} are an established tool in quantum physics, quantum computing, and quantum information to study probability transfer. In quantum computing, they have been used to develop quantum search algorithms generalizing Grover's algorithm \cite{wong2015faster,wong2015grover,shenvi2003quantum,krovi2015quantum,childs2004spatial}, as an improvement over classical random walks and Markov processes \cite{moore2002quantum,childs2003exponential,szegedy2004quantum}, and quantum walks represent a universal model of quantum computation \cite{childs2009universal}.
+
+Quantum walks also provide an algorithmic lens for studying quantum transport in physical systems \cite{mulken2011continuous,mulken2006coherent}; for example photosynthetic complexes \cite{mohseni2008environment,rebentrost2009environment}.  Most recently the investigation of quantum transport phenomena has been expanded to so called, `chiral quantum walks' \cite{Z13}, in which time symmetry is broken during unitary evolution ~\cite{Z13,xiang2013transfer,bedkihal2013transfer,manzano2013transfer, Wong15, cameron2013transfer}.  
+
+The behavior of the fundamental laws of physics under time-reversal has long
+remained central to the foundations of
+physics~\cite{wigner59,2013PhRvL.111b0504S} and has a host of applications in condensed
+matter theory~\cite{peierls1993,hofstadter1976energy,sarma2008hall,
+hasan2010topological,dalibard2011artificial}. Here we however view the practical importance of time-reversal symmetry breaking 
+from the recent results establishing its equivalence to introducing
+biased probability flow in a quantum system \cite{Z13}. It thus enables directed state transfer
+without requiring a biased (or non-local) distribution in the initial states, or coupling to an
+environment~\cite{Z13,plenio2008dephasing, 2012PhRvL.108b0602S, Bose07}.  The effect is however subtle:  it is readily shown that time-reversal asymmetry cannot affect the site-to-site transport in some simple cases, such as a Hamiltonian with a support graph representing either a linear chain or a tree.  
+On the other side, it is easily demonstrated that the effect is present in a range of physically and practically relevant scenarios.  Here we provide the missing classification results in entirety.  
+
+We establish directly and fully classify the graphs, viewed as the support of a Hamiltonian, which enable the breaking of time-reversal 
+symmetry in terms of their transition probabilities between elements in a preferred site-basis.  
+We then find sufficient conditions for particular Hamiltonians to be time-symmetric. We conjecture that these are also necessary.
+
+%\tableofcontents
+
+\subsection{The Probability Transfer Problem}
+
+A continuous time quantum walk~\cite{mulken2011ctqw,PhysRevX.3.041007,childs2009universal,Perseguers2010} is a quantum operator $U(t)=e^{-iHt}$ acting on a normalized vector---for quantum search the normalized all-ones vector and for transport, a state in the site-basis. The Hamiltonian $H$ is an adjacency matrix of a weighted bidirected graph: the Hermitian constraint being that $H=H^\dagger$. We call this graph the support of $H$, which we define more formerly later.
+
+Consequently, the quantum evolution of $U(t)$ induces a walk on the graph the support of $H$ describes. The corresponding graph of $H$ is typically considered as being symmetric, with real valued (and possibly even negative) edge weights: but it needn't be.  More precisely, an edge $e$ connecting vertices $v$ and $w$ can have conjugate weights with respect to $H$ depending if it is viewed as an edge from $v\to w$ or visa versa. Unless explicitly stated, we will assume that the support of our Hamiltonian is connected and simple. However, as will become apparent, it is natural to include self-loops in the case when all of them have the same weight.  This is the setting needed to recover the notion of chiral quantum walks.  Immediately one then asks, ``when can such a process induce time-
+asymmetric evolutions?''  
+
+The question of which processes induce transition probabilities that are symmetric with respect to time must be made more precise: Consider a set $\mathcal{L}\subseteq\End(V)$, here $V$ is a complex Hilbert space with a chosen orthonormal basis $B$. We are given a function $P:B\times B\times\mathcal{L}\to\mathbb{R}_{\ge0}$. Equivalently, $\mathcal{L}\in\Mat_{|B|\times|B|}(\C^{|B|})$, which is to say that $\mathcal{L}$ is matrix from $\C^{|B|}$ to itself expressed in the preferred basis $B$.  Often this function is written as $P_{s\to f}(M)$ where $s$ and $f$ are basis vectors of $V$ and $M\in\mathcal{L}$. The problem is then to classify those $M\in\mathcal{L}$ such that the function $P_{s\to f}(M)-P_{f\to s}(M)=0$ for all basis vectors $f$ and $s$, fixing a set $B$.
+
+From the point of view of quantum walks,  basis vectors in $B$ are identified with vertices in a graph defined by $M$, on which we consider probabilistic walks. $P_{s\to f}(M)$ gives the probability of moving from node $s$ to node $f$. We now look at a two more classical examples that use matrices to define dynamics on graphs in a similar fashion. In each of our examples, $t$ represents a time parameter that allows the walk to evolve.
+
+\begin{example}\label{ex:stochastic}
+Motivationally, we examine this same classification for a subset of stochastic processes. Let $S$ be a valid infinitesimal stochastic generator of a continuous-time Markov process, so $s_{ij}\geq 0$ for $i\neq j$, and $\sum_j q_{ij}=0$ for all $i$.  Then the set of matrices of the form $U(t)=e^{tS}$ is stochastic semi-group. As a caveat, not all stochastic matrices arise this way \cite{davies2010embeddable}. This is because every stochastic matrix of this form is invertible, which is not the case in general, although it's inverse may not necessarily be a stochastic process as well. We define the probability function $P_{s\to f}=U(t)_{fs}=f^\dagger Us$. The \emph{stochastic probability current} is defined by $\hat{s}_{s,f}(U(t)):=U(t)_{fs}-U(t)_{sf}=0$. Then the 
+following are equivalent:
+\begin{enumerate}
+ \item $\hat{s}_{s,f}(U(t))=0$ for all $s$, $f$, and $t$.
+ \item $S=S^T$, i.e.\ $S$ is a Dirichlet operator. 
+%  \item $U(t)$ is doubly stochastic. {\bf JM: I think this is false, since there exist non-symmetric doubly-stochastic matrices with positive eigenvalues, which then have a real log} \jb{is this settled with the fact that we're dealing with semi-groups?} \jt{Jason is right. In fact a sentence below states that the first two conditions are not equivalent to the third.}
+ \end{enumerate}
+\end{example}
+Requiring $U(t)$ to be doubly stochastic isn't sufficient for $\hat{s}_{s,f}(U(t))=0$, since there exist non-symmetric doubly-stochastic matrices with positive eigenvalues, which then have a real logarithm. 
+Zero stochastic probability current is a strictly stronger condition than the reversibility of a Markov chain at some stationary distribution, implying time symmetry at any initial distribution.
+
+\begin{example}\label{ex:quantamp}
+ Another related, but less well known example comes from quantum processes. Let $H$ be Hermitian and define $U(t)=e^{-itH}$. The \emph{quantum amplitude current} is defined to be $\hat{q}_{s,f}(U(t)):=U(t)_{fs}-U(t)_{sf}=0$. Then the following are equivalent:
+ \begin{enumerate}
+  \item $\hat{q}_{s,f}(U(t))=0$ for all $s$, $f$, and $t$.
+  \item $H=H^T$.
+  \item $[H,K]=0$, where $K$ is the antiunitary operator defined by complex conjugation in the same basis as $H$.
+ \end{enumerate}
+
+\end{example}
+
+
+These two examples are mathematically similarly, and in fact the first example is a special case of the second. The set of stochastic generators $S$ that are also symmetric matrices forms a strict subset of symmetric matrices, so $\hat{s}_{s,f}(U(t))=0$ for  all $s,f$ and $t$ implies that $\hat{q}_{s,f}(U(t))=0$ for all $s,f$, and $t$. 
+
+
+
+\subsection{Quantum Probability Current}
+
+The goal of this paper is to study a transition symmetry problem introduced in \cite{Z13}. As in Example \ref{ex:quantamp}, we let $U(t)=e^{-itH}$ for $H$ Hermitian. We define $P_{s\to f}(U(t))=|U(t)_{sf}|^2=|U(t)_{fs}^\dagger|^2$. The \emph{quantum probability current} is defined as $\jmath_{sf}(U(t)):=|U(t)_{fs}|^2-|U(t)^\dagger_{sf}|^2$. The reason for this is as follows: If the quantum walk starts with a particle at vertex $s$, then $\jmath_{sf}(U(t))$ gives the probability of seeing vertex $f$ after applying $U(t)$ and performing a measurement.
+
+\begin{defn}
+ A quantum process is \emph{time-reversal symmetric} if $\jmath_{sf}(U(t))=0$ for all $s,f$ and $t$.
+\end{defn}
+
+
+ The reason for the name time-reversal symmetry is that $U(t)^\dagger_{sf}=U(-t)_{sf}$. Thus $\jmath_{sf}(U(t))=0$ implies that $|U(t)_{sf}|^2=|U(-t)_{sf}|^2$. If the quantum probability current vanishes, we can evolve time in the opposite direction and not change the transition probabilities between nodes.
+
+ Examples \ref{ex:stochastic} and \ref{ex:quantamp} are both special cases of the quantum probability current in the following sense.  We see that for a quantum process with unitary operator $e^{-itH}$, if $H=H^T$, then $H$ must be real and thus trivially time-symmetric. So both of the aforementioned examples arise as subsets of time-symmetric chiral quantum walks. However, we shall see that there are other walks which are time-reversible that do not fall into the above situations.
+
+We shall give a characterization of that graphs which enable time symmetry breaking by viewing the Hamiltonian $H$ as the adjacency matrix of a weighted graph. For the previous examples, time symmetry was equivalent to the Hamiltonian defining an bidirected weighted graph (which means it can be viewed as undirected). In the general setting, there are further conditions the graph must satisfy.
+
+\section{The Vanishing of the Quantum Probability Current}\label{sec:probcurr}
+
+We can always write a unitary operator as $U(t)=e^{-itH}$ where $H$ is Hermitian. Then $P_{s\to f}(U(t))=|f^\dagger e^{-itH} s|^2=|s^\dagger e^{itH} f|^2=P_{f\to s}(U^\dagger(t))$. Furthermore, since taking complex conjugates does not change the norm, $P_{s\to f}(U(t))=P_{f\to s}(U^T(t))$. Thus, reversing time symmetry means $P_{s\to f}(U(t))=P_{s\to f}(U^T(t))$ for all $s$, $f$.
+
+
+In general, if $U$ and $U'$ are matrices, then $|U_{sf}|^2=|U'_{sf}|^2$ for all $s$, $f$ means that there is a matrix $\Theta$ with all entries of norm one such that $\Theta\odot U=U'$, where $\odot$ denotes the Hadamard product. Since $|U_{sf}|^2=\langle s|U|f\rangle$, we see that there are two basic operations on $U$ that preserve this norm. First is the case that $\Theta\odot U=\overline{U}$. This can be thought of as conjugation by the antiunitary operator $K_U$ in the basis of $U$. This antiunitary operator depends on choice of $U$. However, we suppress the subscript on the operator as the meaning should be clear. Otherwise, we can change each basis vector by multiplying by some complex number with unit norm. In other words, $\langle s|\Lambda_1 U\Lambda_2|f\rangle=|U_{sf}|^2$ for $\Lambda_1,\Lambda_2$ diagonal unitary matrices. It is clear that these are the only two operations on $U$ that preserve the entry-wise norms of $U$ and it unitarity.
+
+As a special case of the latter action is the case when $\Lambda_2=\Lambda_1^{-1}$. We call this the \emph{$\Lambda$-action}. The $\Lambda$-action is a change of the preferred site-basis and is what is conventionally viewed as the largest set of symmetries on the state space. However, by asking what the largest set of symmetries preserving the quantum probability current is, one achieves more symmetries in a way that is completely analogous to the methodology of analyzing time symmetry recently proposed in \cite{oreshkov2015operational}.
+
+\begin{defn}
+ The \emph{support} of an $n\times n$ matrix $M$ is a digraph with $n$ vertices and an edge from vertex $i$ to vertex $j$ if $M_{ij}\ne0$. We denote it by $supp(M)$.
+\end{defn}
+
+Note that for a Hermitian matrix $H$, the support is undirected (in the sense that every directed edge has an directed edge in the opposite direction which we can take as a single non-directed edge) as $H_{ij}\ne0$ if and only if $H_{ji}=\overline{H_{ij}}\ne0$. We can think of $H$ as a weighted adjacency matrix. Then we have the weight of traveling in one direction along an edge is the complex conjugate of the weight of traveling the opposite direction.
+
+Given a graph $G$, consider all Hamiltonians whose support is $G$. That is to say that a certain subset of the entries of $H$ must be non-zero and the complimentary subset must be zero. We are interested in classifying those graphs $G$ such that if the support of $H$ is $G$, then $H$ must define a time-symmetric walk. This means no matter which choice of value of we make for the non-zero entries of $H$, the structure of its support forces the vanishing of the probability current. Since any real Hamiltonian is time-symmetric, breaking time symmetry can only be achieved by changing the phases of the non-zero entries of $H$, motivating the following definition.
+
+\begin{defn}
+ We say that a graph $G$ is \emph{phase-independent} if for every Hamiltonian whose support is $G$, the corresponding walk is time-symmetric.
+\end{defn}
+
+The central problem of this paper is to classify those graphs that are phase-independent. While any graph admits a time-symmetric quantum walk but using a real Hamiltonian, it is not true that all graphs have the property that \emph{all} chiral quantum walks on it must be time-symmetric. By solving this problem, we classify those graphs that admit walks that break time symmetry.
+
+
+\begin{comment}
+For a unitary matrix $U$,we want to know if there is a $\Theta$ such that $\Theta\odot U=U^T$. One can immediately deduce that $\Theta_{ii}=1$ and $\Theta_{ij}=\Theta^{-1}_{ji}$ which implies $\Theta$ is Hermitian.
+
+We require that $\Theta\odot U$ be unitary. Let $U$ be $n\times n$. Then \begin{equation}\sum_{j=1}^n{u_{ij}\overline{u_{kj}}\Theta_{ij}\overline{\Theta_{kj}}}=\delta_{ik}.\end{equation} The first possibility is that $\Theta_{ij}u_{ij}=\overline{u_{ij}}$ for all $i,j$. Then $\Theta\odot U=\overline{U}$. This can be thought of as conjugation by the antiunitary operator $K_U$ in the basis of $U$. This antiunitary operator depends on choice of $U$. However, we suppress the subscript on the operator as the meaning should be clear.
+
+Now suppose that $\Theta\ne KM$ for some matrix $M$. In particular, this implies that the operation of taking the Hadamard product with $\Theta$ is a linear map. Note that the vector $(u_{i1}\overline{u_{k1}},\dots,u_{in}\overline{u_{kn}})$ for $i\ne k$ is normal to the vector $(1,\dots,1)$. So the vector $(\Theta_{i1}\overline{\Theta}_{k1},\dots,\Theta_{in}\overline{\Theta}_{kn})$ is in the span of $(1,\dots,1)$. Now we have $\Theta_{ij}\overline{\Theta}_{kj}=\Theta_{ij'}\overline{\Theta}_{kj'}$ for $1\le j,j'\le n$. The first possibility is that $\Theta_{ij}=\alpha_i$ for each $i\in[n]$. Then this amounts to saying that $|U_{sf}|^2=|DU_{sf}|^2$, where $D$ is a diagonal unitary matrix. Another case is that $\Theta_{ij}$ are equal or $\Theta_{ij}=e^{i(\alpha_i-\alpha_j)}$ for all $i,j$. But then either $\Theta\odot U=e^{i\alpha I}U$ or $\Theta\odot U=\Lambda U\Lambda^\dagger$ where $\Lambda$ is a diagonal unitary matrix. Then 
+
+ In conclusion, if there is a $\Theta$ such that $\Theta\odot U=U^T$, then there is a matrix $g$ in the group generated by $K$ and the diagonal unitaries such that $e^{i\alpha I}gUg^\dagger=U^T$ for some $\alpha\in\mathbb{R}$. So to understand when the quantum probability current vanishes, we need to understand these three basic actions.
+\end{comment}
+
+\section{Hamiltonians Under the $\Lambda$-Action}\label{sec:bipartite}
+If $U(t)=e^{-itH}$, where $H$ is Hermitian, then under the $\Lambda$-action, for any diagonal unitary matrix $\Lambda$, 
+\begin{eqnarray}
+P_{s\to f}(\Lambda U(t)\Lambda^\dagger)&=&|f^\dagger e^{-it\Lambda H\Lambda^\dagger}s|^2\\
+&=&|f^\dagger e^{-itH}s|^2=P_{s\to f}(U(t))\nonumber
+\end{eqnarray}
+\noindent as previously mentioned.
+
+
+\begin{defn}
+ Let $H$ be Hermitian and $p=i_1\to i_2\to\cdots\to i_k$ be a path in $supp(H)$. Then we define the weight of $p$ to be $w(p)=H_{i_1i_2}\cdots H_{i_{k-1}i_k}$.
+\end{defn}
+
+
+\begin{theorem}\label{thm:conjtoneg}
+ A Hamiltonian $H$ with zero diagonal is conjugate to its negative under the $\Lambda$-action if and only if its support is bipartite.
+\end{theorem}
+\begin{proof}
+ Only the `if' direction was proven in \cite{Z13}; we include a proof here for completeness. Suppose that the $supp(H)$ is bipartite. If $H$ is $n\times n$, let the vertices be labeled by $1,\dots, n$. Let $A=\{a_1,\dots,a_k\}\subset[n]$ denote one of the independent sets of $supp(H)$. Let $B$ denote the other. Then let $\Lambda_{ii}=-1$ for $i\in A$ and $1$ otherwise. Then $(\Lambda H\Lambda^\dagger)_{ij}=\Lambda_{ii}H_{ij}\Lambda_{jj}^{-1}$. We know that$H_{ij}$ is 0 unless exactly one of either $i$ or $j$ is in $A$ as its support is bipartite. Then $\Lambda_{ii}H_{ij}\Lambda_{jj}^{-1}=-H_{ij}$. So $\Lambda H\Lambda^\dagger=-H$.
+ 
+ For the converse, suppose that $H$ is conjugate to $-H$, i.e. $\exists\Lambda$ such that $\Lambda H\Lambda^\dagger=-H$. Note that $supp(H)=supp(\Lambda H\Lambda^\dagger)$ as it merely changes the weights on the edges. Now let us consider how conjugation of $H$ by $\Lambda$ affects the weights of cycles in $supp(H)$. Let the $\Lambda_{ii}=e^{\alpha_i}$ and $c_\Lambda=i_1\to\cdots\to i_k\to i_1$ be a cycle in with weights determined by $\Lambda H\Lambda^\dagger$. Let $c$ be the same cycle with weights determined by $H$. Then 
+
+\begin{eqnarray}
+w(c_\Lambda)&=&e^{\alpha_{i_1}-\alpha_{i_2}}H_{i_1i_2}\cdots e^{\alpha_{i_k}-\alpha_{i_1}}H_{i_ki_1}\\
+&=&H_{i_1i_2}\cdots H_{i_ki_1}=w(c).\nonumber 
+\end{eqnarray}
+ But since $\Lambda H\Lambda^\dagger=-H$, we have
+ \begin{eqnarray}w(c_\Lambda)&=&-H_{i_1i_2}\cdots-H_{i_ki_1}\\&=&H_{i_1i_2}\cdots H_{i_ki_1}=w(c)\nonumber\end{eqnarray}
+ implying that the cycle must be of even length. Since all cycles are of even length, $supp(H)$ is bipartite.
+\end{proof}
+
+Note that this necessarily requires that $H$ have zeros on the diagonal. However, one can trivially see that for $\alpha\in\mathbb{R}$, \begin{eqnarray}
+P_{s\to f}(e^{-it(H+\alpha I)})&=&P_{s\to f}(e^{-i\alpha tI}e^{-itH})\\
+&=&P_{s\to f}(e^{-itH}).\nonumber
+\end{eqnarray}
+ So if $H$ is time-symmetric, $H+\alpha I$ is as well. In particular, the $supp(H)$ can be bipartite with self-loops if the every loop has the same weight. However, one cannot add arbitrary diagonal matrices to $H$ and preserve time symmetry.
+ 
+ \begin{example}\label{ex:disorder}
+The following Hamiltonian is not time-symmetric however because the diagonal contains distinct entries, although if the diagonal is made to be all zeros, then the support is bipartite.
+\begin{equation*}
+ \begin{pmatrix}
+  1&1&0&i\\
+  1&2&1&0\\
+  0&1&3&1\\
+  -i&0&1&4
+ \end{pmatrix}
+\end{equation*}
+\end{example}
+ 
+ \begin{corollary}\label{cor:bipartitephaseind}
+ Bipartite graphs are phase-independent.
+\end{corollary}
+\begin{proof}
+ Theorem \ref{thm:conjtoneg} states that whether or not a Hamiltonian is conjugate to its negative depends only on its support. The values of the non-zero entries are irrelevant.
+\end{proof}
+
+
+
+ 
+\section{Hamiltonians Conjugate to Real Matrices}
+
+We now consider how the $\Lambda$-action combined with conjugation by the antiunitary operator $K$ can be used to analyze time symmetry. This of interest in its own right as it gives sufficient conditions for a \emph{specific} Hamiltonian whose support is not necessarily bipartite to define a time-symmetric walk. It will also be important in our classification of phase-independent graphs as well.
+
+As previously mentioned, fixing a basis $B$ defines a complex conjugation involution on linear maps, $M \mapsto \overline{M}$. 
+It is always the case that $P_{s\to f}(\overline{U(t)})=P_{s\to f}(U(t))$. But if $H$ is a real matrix, 
+\begin{eqnarray}
+P_{s\to f}(\overline{U(t)})&=&|f^\dagger \overline{e^{-itH}} s|^2\\ &=&|f^\dagger e^{\overline{-itH}} s|^2=|f^\dagger e^{itH}s|^2.\nonumber
+\end{eqnarray}
+
+So if $H$ is conjugate via the $\Lambda$-action to a real matrix, then $H$ is time-symmetric combining the $\Lambda$-action with the action of %$K$.
+complex conjugation in our chosen basis. 
+
+ This action is the same as conjugation by $U(1)^n$, if $H$ is $n\times n$. The invariants of this action are generated by the weights of cycles (which are allowed to repeat edges or vertices) in the support of length $\le n$. More formally, the polynomials $H_{i_1i_2}\cdots H_{i_ki_1}$, where $1\le k\le n$ generate the invariant ring $\C[\End(\C^n)]^{U(1)^n}$, where $\C[\End(\C^n)]^{U(1)^n}$ is the ring of polynomials that are constant on the orbits of $U(1)^n$. We emphasize that invariants of the form $H_{ij}H_{ji}=|H_{ij}|^2$ and $H_{ii}$ are included. However, these invariants are necessarily real and so we call these the \emph{trivial invariants}.
+
+We claim that two Hermitian matrices are in the same $U(1)^n$ orbit if and only if they have the same values on all invariants. If they are in the same orbit, it is clear they agree on all invariants. However, the converse is not necessarily true as the orbits may not be closed in the appropriate topology (the Zariski topology). If two orbits have boundary points in common, then it will be impossible to distinguish them using invariants. 
+
+We wish to show that the orbit closures of two Hermitian matrices do not intersect. We first consider the orbit closures of Hermitian matrices under the action of the closely related group $\GL(1)^n$. It is clear that this group action has exactly the same invariant polynomials as $U(1)^n$. 
+
+
+% Although in our case this is evident from inspection, the algebraic reason for this is that $U(n)$ is Zariski-dense inside of $\GL(n)$. From this it immediately follows that $U(1)^n$ is Zariski dense in $\GL(1)^n$, which implies the two groups have the same invariant polynomials (cf. \cite{kraft2000classical}). For the group $\GL(1)^n$, we can use the following theorem.
+
+\begin{theorem}[Hilbert-Mumford Criterion \cite{kempf1978instability}]\label{thm:hmcrit}
+ If $G$ is a product of general linear groups acting on a complex vector space $V$, then  if $\overline{G.v}-G.v\ne\emptyset$, there is some $y\in\overline{G.v}-G.v\ne\emptyset$ and a 1-parameter subgroup $\lambda:\C^\times\to G$ such that $\lim_{t\to 0}{\lambda(t).v}=y$.
+\end{theorem}
+
+For the action of of $\GL(1)^n\actson\End(\C^n)$ by conjugation, the only 1-parameter subgroups in $\GL(1)^n$ are diagonal matrices of the form $\lambda(t)_{ii}=t^{\alpha_i}$, $\alpha_i\in\ZZ$ (cf. \cite{kraft2000classical}). If the orbit of $M$ is closed, then there is no 1-parameter subgroup taking $M$ outside of its orbit by Theorem \ref{thm:hmcrit}. If $\lambda(t)$ is diagonal with $\lambda(t)_{ii}=t^{\alpha_i}$, then $\lambda(t)M\lambda(t)^{-1}=\{t^{\alpha_i-\alpha_j}m_{ij}\}$. If $\lim_{t\to0}{\lambda(t)M\lambda(t)^{-1}}$ exists, then no negative power of $t$ appears in $\lambda(t)M\lambda(t)^{-1}$. Furthermore, the limit sends some of the entries of $M$ to zero and leaves the rest unchanged.
+ 
+\begin{proposition}\label{cor:lambdaclosed}
+ Hermitian matrices have closed orbits under the action of $\GL(1)^n$.
+\end{proposition}
+\begin{proof}
+Let $\lambda(t)$ be a 1-parameter subgroup such that $\lim_{t\to 0}{\lambda(t)M\lambda(t)^{-1}}$ exists, $M$ Hermitian. Then suppose $t^{\alpha_i-\alpha_j}m_{ij}$, $\alpha_i>\alpha_j$, is an non-zero entry of $\lambda(t)M\lambda(t)^{-1}$. Then so is $t^{\alpha_j-\alpha_i}m_{ji}$. Thus it's easy to see that as $t\to 0$, $t^{\alpha_j-\alpha_i}m_{ji}$ goes to infinity. So it must be that $\lambda(t)M\lambda(t)^{-1}=M$, implying it has a closed orbit.
+\end{proof}
+
+The following proposition tells us that by restricting our view to matrices that have closed orbits, all the information we need is given by the invariant polynomials.
+
+\begin{proposition}[\cite{MR1304906}]\label{prop:closedorbits}
+ For a product of general linear groups acting on a complex vector space $V$, if $M_1$ and $M_2$ have closed orbits, they are in the same orbit if and only if they agree on all invariants.
+\end{proposition}
+
+
+\begin{theorem}\label{thm:realinvs}
+ A Hermitian matrix $H$ takes real values on its invariants if and only if its support is a tree or it is conjugate to a real matrix via $U(1)^n$. Furthermore, $H$ is conjugate to $\overline{H}$ if and only if $H$ is also conjugate to a real matrix.
+\end{theorem}
+\begin{proof}
+ If $H$ is conjugate to a real matrix or its support is a tree, this it is clear that all of its invariants are real. Now suppose $H$ takes real values on all of its invariants. Note that $|H|$ takes the same value on all of these invariants. Since $H$ and $|H|$ are both Hermitian, their orbits are closed and thus there is a $g\in \GL(1)^n$ such that $|H|=gHg^{-1}$ by Corollary \ref{cor:lambdaclosed} and Proposition \ref{prop:closedorbits}. Now note that $g=h\Lambda$ where $\Lambda$ is a diagonal unitary matrix and $h$ is a diagonal matrix with nonnegative real values. Since conjugating by $h$ cannot change non-real entries of $H$ to real numbers, it must be that $\Lambda H\Lambda^\dagger$ is real.
+ 
+Now let $w_p(H)$ be the invariant defined by looking at the weight of the cycle $p$ in the support of $H$ with edge weights induced by $H$. Then it is clear that $w_p(H)=\overline{w_p(\overline{H})}$. So we see that $H$ and $\overline{H}$ are conjugate if and only if $w_p(H)=\overline{w_p(H)}$ by Corollary \ref{cor:lambdaclosed}. But this happens if and only if all invariants of $H$ are real and by the first assertion of the theorem, is equivalent to the fact that $H$ is conjugate to a real matrix.
+\end{proof}
+\begin{corollary}\label{cor:realinvs}
+ If a Hermitian matrix takes real values on all of its invariants, it is time-symmetric.
+\end{corollary}
+\begin{proof}
+ From Theorem \ref{thm:realinvs}, we know that either the support of $H$ is a tree, which is time-symmetric by Theorem \ref{thm:conjtoneg}, or is conjugate to a real matrix, which makes it time-symmetric.
+\end{proof}
+
+By Theorem \ref{thm:conjtoneg} and Corollary \ref{cor:realinvs}, we have that if $H$ has bipartite support or all of its invariants take real values, then $H$ defines a time-symmetric walk. We conjecture that the converse is also true.
+
+\begin{conjecture}
+ A Hamiltonian $H$ defines a time-symmetric quantum walk if and only if the support of $H$ is bipartite or all of its invariants take real values.
+\end{conjecture}
+
+
+\section{Classification of Phase-Independent Graphs}
+
+Given a unitary operator $U=e^{-itH}$, it is time-symmetric if and only if it satisfies one of three possibilities: There exists $\Lambda,\Lambda'\in U(1)^n$ such that either
+\begin{enumerate}
+ \item $\Lambda U\Lambda'=e^{itH}=U^\dagger$,
+ \item $\Lambda U \Lambda'=e^{-it\overline{H}}=U^T$ and then conjugating by $K$,
+ \item $\Lambda U\Lambda'=e^ {-it H'}$ where $H'$ is real, and then conjugating by $K$.
+\end{enumerate}
+Actually, we have from Theorem \ref{thm:realinvs} that the latter two cases are equivalent: There exists $\Lambda_1,\Lambda_2$ such that $\Lambda_1 U \Lambda_2=e^{-it\overline{H}}$ if and only if there exists $\Lambda_1',\Lambda_2'$ such that $\Lambda'_1 U\Lambda'_2=e^ {-it H'}$ where $H'$ is real. Furthermore, we find that for a specific choice of phases for the non-zero entries of $H$, all three conditions become equivalent.
+
+\begin{lemma}\label{lem:skewsymmetric}
+ For every Hamiltonian $H$ with zero diagonal, the phases of its non-zero entries be changed to give a Hamiltonian $H'$ such that $-iH'$ is a real skew-symmetric matrix and thus $(e^{-itH'})^\dagger=(e^{-itH'})^T$.
+\end{lemma}
+\begin{proof}
+ Let $H=\{h_{ij}\}$. If $h_{ij}=re^{i\theta}$ for $r>0$ and $i>j$, we define $H'=\{h'_{ij}\}$ where $h'_{ij}=re^{i\pi/2}$. If $i<j$, then $h'_{ij}=re^{-i\pi/2}$. Then we see that $-iH$ is a real matrix. A real skew-Hermitian is a skew-symmetric matrix and so $e^{-itH}$ is a real orthogonal matrix.
+\end{proof}
+
+So if we are allowed to change the phases of our Hamiltonians, then Lemma \ref{lem:skewsymmetric} implies that for every graph $G$, there is a skew-symmetric matrix $-itH$, with $H$ supported on $G$. Thus there must exist $\Lambda,\Lambda'\in U(1)^n$ such that $\Lambda U(t)\Lambda'=U(t)^\dagger$, where $U(t)=e^{-itH}$.
+
+ We note that $\Lambda U(t)\Lambda'=U(t)^\dagger$ implies that $u_{ij}=0$ if and only if $u_{ji}=0$. As such, we can talk about the support of $U(t)$ which we can view as an undirected graph.
+
+\begin{proposition}\label{prop:decomp}
+ Let $U$ be a real unitary matrix $U$ whose Hamiltonian has connected support and zero diagonal. Suppose that there exists $\Lambda,\Lambda'\in U(1)^n$ such that $\Lambda U\Lambda'=U^\dagger$, then
+ \begin{enumerate}[(a)]
+  \item There exists a permutation matrix $\Sigma$ such that $\Sigma U\Sigma^{-1}=U_0\oplus U_1$ where $U_1$ is diagonal
+  \item If $I$ are the row and column indices of $U_0$, then $\Lambda'_I=\alpha \Lambda_I^{-1}$ for some complex $\alpha$ with unit norm. Furthermore, we may assume $\alpha=1$.
+ \end{enumerate}
+\end{proposition}
+\begin{proof}
+ Let $U=\{u_{ij}\}$ and let $\{\ell_i\}, \{\ell'_i\}$ be the diagonal entries of $\Lambda$, $\Lambda'$, respectively. Part (a) is clear; for every $u_{jj}$ such that this entry is the only non-zero entry in both row $j$ and column $j$, add the $j$ to a set of indices $J$. Then if we set $U_1=U_J$ and let the complement of $J$ be denoted $I$, we get $U_0=U_I$. This gives a decomposition as in Part (a). 
+ 
+ For Part (b), it is sufficient to prove the claim for the case $U_0=U$. We note that $\ell_i\ell'_ju_{ij}=\overline{u_{ji}}$ and that $\ell_j\ell'_iu_{ji}=\overline{u_{ij}}$ implying that $\ell_i\ell'_j=\ell_j\ell'_i$, for all $i,j$ distinct. If we look at the matrix with first row $(\ell_1,\dots,\ell_n)$ and second row $(\ell_1,\dots,\ell_n)$, we see that all $2\times 2 $ minors of this matrix vanishes and so is rank one. This implies that the first row is a multiple of the second and thus that $\Lambda=\alpha \Lambda'$. However, we may assume that $\alpha=1$ since we can replace $\Lambda$ with $\sqrt{\alpha}\Lambda$ and $\Lambda'$ likewise. So we can assume that $\Lambda=\Lambda'$.
+ 
+ We now note that $\overline{u_{ji}}/u_{ij}=\overline{u_{ij}}/u_{ji}$ by the fact that $\Lambda=\Lambda'$. Cross-multiplying yields that $|u_{ij}|^2=|u_{ji}|^2$. Since $U$ is real, we have that $u_{ij}=\pm u_{ji}$. This further implies that each diagonal entry of $\Lambda$ is $\pm 1$ or $\pm i$. Let $I$ be the indices of $\Lambda$ with row entries $\pm i$. Then since $U$ is real, then there is a permutation matrix $\Sigma$ such that $\Sigma U\Sigma^{-1}=U_I\oplus U_{I^c}$, where $I^c$ is the compliment of $I$. We further see that $\Lambda_I^{-1}=-\Lambda_I$ and $\Lambda_{I^c}^{-1}=\Lambda_{I_c}$.
+
+ 
+ We recall an important fact about the matrix exponential function: $e^{A\oplus B}=e^A\oplus e^B$. If a unitary matrix can be written as a direct sum, so can its Hamiltonian. If a Hamiltonian can be written as a direct sum, this means that its support is not connected. So we may now assume that $\Lambda'=\pm \Lambda^{-1}$. 
+ 
+ If $\Lambda'=-\Lambda^{-1}$, then $\Lambda U\Lambda^{-1}=-U^\dagger$. But since the Hamiltonian of $U$ has zero diagonal, so does $\Lambda U\Lambda^{-1}$ and $U^\dagger$. But $-U^\dagger=e^{-i\pi} U^\dagger$ has $\pi$ for every diagonal entry. So this gives a contradiction and so $\Lambda'=\Lambda^{-1}$.
+\end{proof}
+
+ 
+
+\begin{corollary}\label{cor:twocases}
+ Given a real unitary matrix $U(t)$ such that there exists $\Lambda,\Lambda'\in U(1)^n$ such that $\Lambda U(t)\Lambda'=U(t)^\dagger$ and the support of the Hamiltonian of $U$ is connected then either $U(t)$ is $1\times 1$ or there exists $A\in U(1)^n$ such that $A U(t)A^{-1}=U(t)^\dagger$.
+\end{corollary}
+\begin{proof}
+ This follows from Proposition \ref{prop:decomp} and the fact that $U_1$ can be written as a direct sum of $1\times 1$ matrices. 
+\end{proof}
+
+We wish to show that if $U(t)$ is real, then it is is time-symmetric if and only if its Hamiltonian has bipartite support with possible self-loops all of equal weight on all vertice. We note that a $1\times 1$ unitary matrix has a $1\times 1$ Hamiltonian. The support of such a Hamiltonian is the tree on one vertex with possible self-loops of equal weight on all vertices. We now provide the full classification of phase-independent graphs.
+
+\begin{theorem}\label{thm:classify}
+ A graph is phase-independent if and only if it is bipartite with possible self-loops of equal weight on all vertices.
+\end{theorem}
+\begin{proof}
+We first prove this for One direction is given by Corollary \ref{cor:bipartitephaseind}.  We know from Lemma \ref{lem:skewsymmetric} that if a graph $G$ is phase-independent, this implies that for some Hamiltonian $H$ whose support is $G$ that there are $\Lambda_1,\Lambda_2\in U(1)^n$ such that $\Lambda_1 e^{-itH}\Lambda_2=e^{-itH^\dagger}$ and $e^{-itH}$ is real. By Corollary \ref{cor:twocases}, either we may assume $\Lambda_1=\Lambda_2^{-1}$ or $U$ is $1\times 1$ and thus its Hamiltonian has bipartite support with possible self-loops of equal weight on all vertices. Otherwise, if we may assume that$\Lambda_1=\Lambda_2^{-1}$, then by Theorem \ref{thm:realinvs} and Theorem \ref{thm:conjtoneg}, either all of the invariants of $H$ are real or $H$ has bipartite support. If the invariants of $H$ are all real and $G$ is not a tree, then changing the phases of $H$ can make some of the invariants not real. So if $G$ is to be phase-independent, $H$ must be bipartite. 
+\end{proof}
+
+\begin{corollary}
+ A graph admits a chiral quantum walk that breaks time symmetry if and only if it is not bipartite. In fact, we explicitly showed how to construct such a walk: Choose $-itH$ to be skew-symmetric, making $U(t)$ a real orthogonal matrix. If the support of $H$ is not bipartite, this walk breaks time symmetry.
+\end{corollary}
+
+
+\subsection{Disorder and $\alpha$ Independence}
+
+Using the invariant techniques developed above, we can quickly answer two other interesting questions. Suppose disorder is added to a system by changing the energies of nodes, i.e. having self loops of different weights. This corresponds to adding a real diagonal matrix to the Hamiltonian. As Example \ref{ex:disorder} shows, adding disorder can break time symmetry. The following proposition gives a necessary condition for this to not break time symmetry.
+\begin{proposition}\label{prop:adddiag}
+If $H$ is conjugate to a real matrix via $U(1)^n$, then for any real diagonal matrix $D$, $H+D$ is time-symmetric.
+\end{proposition}
+\begin{proof}
+If there is a $\Lambda\in U(1)^n$ such that $\Lambda H\Lambda^\dagger$ is real, then $\Lambda(H+D)\Lambda^\dagger=\Lambda H\Lambda^\dagger+D$ is also real and thus time-symmetric.
+\end{proof}
+
+
+
+If we are given a Hamiltonian $H=(h_{ij}e^{i\alpha_{ij}})$ with $h_{ij},\alpha_{ij}\in\mathbb{R}_{\ge0}$, the second interesting question is how the transition probabilities are affected by the choice of phases $\alpha_{ij}$. It was shown in \cite{Z13} that if the underlying graph of $H$ is a tree, then surprisingly, the transition probabilities are not affected by the choice of $\alpha_{ij}$. The following proposition shows that this is the only case where this happens.
+
+\begin{proposition}
+ The probability function is independent of the choice of $\alpha_{ij}$ if and only if the underlying graph of $H$ is a tree (with possible self-loops).
+\end{proposition}
+\begin{proof}
+ By the assumption that the probability function is independent of the choice of $\alpha_{ij}$, we know that the support must be phase-independent and thus bipartite by Theorem \ref{thm:classify}. For bipartite graphs, we need only consider the $\Lambda$-action by Theorem \ref{thm:conjtoneg}.  A tree has the property that the only invariants that are non-zero are the trivial invariants. Thus all of its invariants are real. Adding self-loops corresponds to adding diagonal entries, which must also be real. By Theorem \ref{thm:realinvs}, it is conjugate to a real matrix no matter what choice of $\alpha_{ij}$ we start with. If the support is not a tree, then one of the invariants corresponding to a cycle in the graph is non-zero and can by made complex by appropriate choice of the $\alpha_{ij}$. On the other hand, by choosing all $\alpha_{ij}=0$, we get another Hamiltonian that takes a real value on that same invariant. Therefore there are two non-equivalent Hamiltonians, meaning that we do not have independence 
+in the choice of the $\alpha_{ij}$.
+\end{proof}
+
+
+
+\subsection*{Acknowledgments} The research leading to these results has received funding from the European Research Council under the European Union's Seventh Framework Programme (FP7/2007-2013) / ERC grant agreement No 339109.
+
+\bibliography{chiral} 
+
+\end{document}

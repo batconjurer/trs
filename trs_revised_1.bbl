@@ -1,0 +1,226 @@
+\def\cprime{$'$}
+\begin{thebibliography}{10}
+
+\bibitem{Lanyon2010towards}
+B.~P. Lanyon et~al.
+\newblock {Towards quantum chemistry on a quantum computer}.
+\newblock {\em Nature Chemistry}, 2:106--111, February 2010.
+
+\bibitem{nv_opt2013}
+F.~Dolde, V.~Bergholm, Y.~Wang, et~al.
+\newblock High fidelity spin entanglement using optimal control.
+\newblock {\em Nat. Commun.}, 5:3371, 2014.
+
+\bibitem{kempe2003quantum}
+Julia Kempe.
+\newblock Quantum random walks: an introductory overview.
+\newblock {\em Contemporary Physics}, 44(4):307--327, 2003.
+
+\bibitem{venegas2012quantum}
+Salvador~El{\'\i}as Venegas-Andraca.
+\newblock Quantum walks: a comprehensive review.
+\newblock {\em Quantum Information Processing}, 11(5):1015--1106, 2012.
+
+\bibitem{wong2015faster}
+Thomas~G Wong.
+\newblock Faster quantum walk search on a weighted graph.
+\newblock {\em Physical Review A}, 92(3):032320, 2015.
+
+\bibitem{wong2015grover}
+Thomas~G Wong.
+\newblock Grover search with lackadaisical quantum walks.
+\newblock {\em arXiv preprint arXiv:1502.04567}, 2015.
+
+\bibitem{shenvi2003quantum}
+Neil Shenvi, Julia Kempe, and K~Birgitta Whaley.
+\newblock Quantum random-walk search algorithm.
+\newblock {\em Physical Review A}, 67(5):052307, 2003.
+
+\bibitem{krovi2015quantum}
+Hari Krovi, Fr{\'e}d{\'e}ric Magniez, Maris Ozols, and J{\'e}r{\'e}mie Roland.
+\newblock Quantum walks can find a marked element on any graph.
+\newblock {\em Algorithmica}, pages 1--57, 2015.
+
+\bibitem{childs2004spatial}
+Andrew~M Childs and Jeffrey Goldstone.
+\newblock Spatial search by quantum walk.
+\newblock {\em Physical Review A}, 70(2):022314, 2004.
+
+\bibitem{moore2002quantum}
+Cristopher Moore and Alexander Russell.
+\newblock Quantum walks on the hypercube.
+\newblock In {\em Randomization and Approximation Techniques in Computer
+  Science}, pages 164--178. Springer, 2002.
+
+\bibitem{childs2003exponential}
+Andrew~M Childs, Richard Cleve, Enrico Deotto, Edward Farhi, Sam Gutmann, and
+  Daniel~A Spielman.
+\newblock Exponential algorithmic speedup by a quantum walk.
+\newblock In {\em Proceedings of the thirty-fifth annual ACM symposium on
+  Theory of computing}, pages 59--68. ACM, 2003.
+
+\bibitem{szegedy2004quantum}
+Mario Szegedy.
+\newblock Quantum speed-up of markov chain based algorithms.
+\newblock In {\em Foundations of Computer Science, 2004. Proceedings. 45th
+  Annual IEEE Symposium on}, pages 32--41. IEEE, 2004.
+
+\bibitem{childs2009universal}
+A.~M. Childs.
+\newblock Universal computation by quantum walk.
+\newblock {\em Phys. Rev. Lett.}, 102:180501, May 2009.
+
+\bibitem{mulken2011continuous}
+Oliver M{\"u}lken and Alexander Blumen.
+\newblock Continuous-time quantum walks: Models for coherent transport on
+  complex networks.
+\newblock {\em Physics Reports}, 502(2):37--87, 2011.
+
+\bibitem{mulken2006coherent}
+Oliver M{\"u}lken, Veronika Bierbaum, and Alexander Blumen.
+\newblock Coherent exciton transport in dendrimers and continuous-time quantum
+  walks.
+\newblock {\em The Journal of chemical physics}, 124(12):124905, 2006.
+
+\bibitem{mohseni2008environment}
+Masoud Mohseni, Patrick Rebentrost, Seth Lloyd, and Alan Aspuru-Guzik.
+\newblock Environment-assisted quantum walks in photosynthetic energy transfer.
+\newblock {\em The Journal of chemical physics}, 129(17):174106, 2008.
+
+\bibitem{rebentrost2009environment}
+Patrick Rebentrost, Masoud Mohseni, Ivan Kassal, Seth Lloyd, and Al{\'a}n
+  Aspuru-Guzik.
+\newblock Environment-assisted quantum transport.
+\newblock {\em New Journal of Physics}, 11(3):033003, 2009.
+
+\bibitem{Z13}
+Z.~Zimbor{\'a}s, M.~Faccin, Z.~K{\'a}d{\'a}r, J.~D. Whitfield, B.~P. Lanyon,
+  and J.~Biamonte.
+\newblock Quantum transport enhancement by time-reversal symmetry breaking.
+\newblock {\em Sci. Rep.}, 3:2361, August 2013.
+
+\bibitem{xiang2013transfer}
+P.~Xiang, M.~Litinskaya, E.~A. Shapiro, and R.~V. Krems.
+\newblock Non-adiabatic control of quantum energy transfer in ordered and
+  disordered arrays.
+\newblock {\em New J. Phys.}, 15(6):063015, 2013.
+
+\bibitem{bedkihal2013transfer}
+S.~Bedkihal, M.~Bandyopadhyay, and D.~Segal.
+\newblock The probe technique far from equilibrium: Magnetic field symmetries
+  of nonlinear transport.
+\newblock {\em Eur. Phys. J. B}, 86(12):1--18, 2013.
+
+\bibitem{manzano2013transfer}
+D.~Manzano and P.~I. Hurtado.
+\newblock Symmetry and the thermodynamics of currents in open quantum systems.
+\newblock {\em Phys. Rev. B}, 90:125138, Sep 2014.
+
+\bibitem{Wong15}
+T.~G. Wong.
+\newblock Quantum walk search with time-reversal symmetry breaking.
+\newblock {\em J. Phys. A: Math. Theor.}, 48:405303, 2015.
+
+\bibitem{cameron2013transfer}
+S.~Cameron, S.~Fehrenbach, L.~Granger, O.~Hennigh, S.~Shrestha, and C.~Tamon.
+\newblock Universal state transfer on graphs.
+\newblock {\em Linear Algebra Appl.}, 455:115--142, 2014.
+
+\bibitem{wigner59}
+E.~P. Wigner.
+\newblock {\em Group Theory and its Application to the Quantum Mechanics of
+  Atomic Spectra}.
+\newblock New York: Academic Press, 1959.
+
+\bibitem{2013PhRvL.111b0504S}
+M.~Skotiniotis, B.~Toloui, I.~T. Durham, and B.~C. Sanders.
+\newblock Quantum frameness for cpt symmetry.
+\newblock {\em Phys. Rev. Lett.}, 111(2):020504, July 2013.
+
+\bibitem{peierls1993}
+R.~Peierls.
+\newblock On the theory of diamagnetism of conduction electrons.
+\newblock {\em Z. Phys.}, 80:763--791, 1933.
+
+\bibitem{hofstadter1976energy}
+D.~R. Hofstadter.
+\newblock Energy levels and wave functions of {B}loch electrons in rational and
+  irrational magnetic fields.
+\newblock {\em Phys. Rev. B}, 14:2239--2249, Sep 1976.
+
+\bibitem{sarma2008hall}
+S.~Das Sarma and A.~Pinczuk.
+\newblock {\em Perspectives in quantum Hall effects}.
+\newblock John Wiley \& Sons, 2008.
+
+\bibitem{hasan2010topological}
+M.~Z. Hasan and C.~L. Kane.
+\newblock Colloquium: {T}opological insulators.
+\newblock {\em Rev. Mod. Phys.}, 82:3045--3067, Nov 2010.
+
+\bibitem{dalibard2011artificial}
+Jean Dalibard, Fabrice Gerbier, Gediminas Juzeli{\=u}nas, and Patrik
+  {\"O}hberg.
+\newblock Colloquium: {A}rtificial gauge potentials for neutral atoms.
+\newblock {\em Rev. Mod. Phys.}, 83:1523--1543, Nov 2011.
+
+\bibitem{plenio2008dephasing}
+M.~B. Plenio and S.~F. Huelga.
+\newblock Dephasing-assisted transport: quantum networks and biomolecules.
+\newblock {\em New J. Phys.}, 10(11):113019, 2008.
+
+\bibitem{2012PhRvL.108b0602S}
+I.~Sinayskiy, A.~Marais, F.~Petruccione, and A.~Ekert.
+\newblock Decoherence-assisted transport in a dimer system.
+\newblock {\em Phys. Rev. Lett.}, 108(2):020602, January 2012.
+
+\bibitem{Bose07}
+S.~Bose.
+\newblock Quantum communication through spin chain dynamics: an introductory
+  overview.
+\newblock {\em Contemporary Physics}, 48(1):13--30, 2007.
+
+\bibitem{mulken2011ctqw}
+O.~M{\"u}lken and A.~Blumen.
+\newblock Continuous-time quantum walks: {M}odels for coherent transport on
+  complex networks.
+\newblock {\em Phys. Rep.}, 502:37--87, 2011.
+
+\bibitem{PhysRevX.3.041007}
+M.~Faccin, T.~Johnson, J.~D. Biamonte, S.~Kais, and P.~Migda\l{}.
+\newblock Degree distribution in quantum walks on complex networks.
+\newblock {\em Phys. Rev. X}, 3:041007, Oct 2013.
+
+\bibitem{Perseguers2010}
+S.~Perseguers, M.~Lewenstein, A.~Ac{\'i}n, and J.~I. Cirac.
+\newblock Quantum random networks.
+\newblock {\em Nature Physics}, 6:539--543, 2010.
+
+\bibitem{davies2010embeddable}
+EB~Davies.
+\newblock Embeddable markov matrices.
+\newblock {\em Electronic Journal of Probability}, 15:1474--1486, 2010.
+
+\bibitem{oreshkov2015operational}
+Ognyan Oreshkov and Nicolas~J Cerf.
+\newblock Operational formulation of time reversal in quantum theory.
+\newblock {\em Nature Physics}, 2015.
+
+\bibitem{kempf1978instability}
+George~R Kempf.
+\newblock Instability in invariant theory.
+\newblock {\em Annals of Mathematics}, pages 299--316, 1978.
+
+\bibitem{kraft2000classical}
+Hanspeter Kraft and Claudio Procesi.
+\newblock Classical invariant theory, a primer.
+\newblock {\em Lecture Notes, Version}, 2000.
+
+\bibitem{MR1304906}
+D.~Mumford, J.~Fogarty, and F.~Kirwan.
+\newblock {\em Geometric invariant theory}, volume~34 of {\em Ergebnisse der
+  Mathematik und ihrer Grenzgebiete (2) [Results in Mathematics and Related
+  Areas (2)]}.
+\newblock Springer-Verlag, Berlin, third edition, 1994.
+
+\end{thebibliography}

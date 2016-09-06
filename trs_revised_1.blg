@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: trs_revised_1.aux
+The style file: unsrt.bst
+Database file #1: trs_revised_1Notes.bib
+Database file #2: chiral.bib
+Repeated entry---line 1990 of file chiral.bib
+ : @article{childs2009universal
+ :                             ,
+I'm skipping whatever remains of this entry
+You've used 41 entries,
+            1791 wiz_defined-function locations,
+            715 strings with 9659 characters,
+and the built_in function-call counts, 9617 in all, are:
+= -- 870
+> -- 390
+< -- 6
++ -- 148
+- -- 107
+* -- 693
+:= -- 1534
+add.period$ -- 126
+call.type$ -- 41
+change.case$ -- 39
+chr.to.int$ -- 0
+cite$ -- 41
+duplicate$ -- 417
+empty$ -- 948
+format.name$ -- 107
+if$ -- 2128
+int.to.chr$ -- 0
+int.to.str$ -- 41
+missing$ -- 44
+newline$ -- 209
+num.names$ -- 41
+pop$ -- 81
+preamble$ -- 2
+purify$ -- 0
+quote$ -- 0
+skip$ -- 174
+stack$ -- 0
+substring$ -- 748
+swap$ -- 82
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 97
+width$ -- 43
+write$ -- 454
+(There was 1 error message)
