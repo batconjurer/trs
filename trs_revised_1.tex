@@ -282,7 +282,9 @@ We shall give a characterization of that graphs which enable time symmetry break
 We can always write a unitary operator as $U(t)=e^{-itH}$ where $H$ is Hermitian. Then $P_{s\to f}(U(t))=|f^\dagger e^{-itH} s|^2=|s^\dagger e^{itH} f|^2=P_{f\to s}(U^\dagger(t))$. Furthermore, since taking complex conjugates does not change the norm, $P_{s\to f}(U(t))=P_{f\to s}(U^T(t))$. Thus, reversing time symmetry means $P_{s\to f}(U(t))=P_{s\to f}(U^T(t))$ for all $s$, $f$.
 
 
-In general, if $U$ and $U'$ are matrices, then $|U_{sf}|^2=|U'_{sf}|^2$ for all $s$, $f$ means that there is a matrix $\Theta$ with all entries of norm one such that $\Theta\odot U=U'$, where $\odot$ denotes the Hadamard product. Since $|U_{sf}|^2=\langle s|U|f\rangle$, we see that there are two basic operations on $U$ that preserve this norm. First is the case that $\Theta\odot U=\overline{U}$. This can be thought of as conjugation by the antiunitary operator $K_U$ in the basis of $U$. This antiunitary operator depends on choice of $U$. However, we suppress the subscript on the operator as the meaning should be clear. Otherwise, we can change each basis vector by multiplying by some complex number with unit norm. In other words, $\langle s|\Lambda_1 U\Lambda_2|f\rangle=|U_{sf}|^2$ for $\Lambda_1,\Lambda_2$ diagonal unitary matrices. It is clear that these are the only two operations on $U$ that preserve the entry-wise norms of $U$ and it unitarity.
+We define an equivalence relation on unitary operators; $U\sim U'$ if $|U_{sf}|^2=|U'_{sf}|^2$ for all $s$, $f$. Time reversal symmetry asks when $U(t)\sim U(-t)$. This equivalence relation means that there is a matrix $\Theta$ with all entries of norm one such that $\Theta\odot U=U'$, where $\odot$ denotes the Hadamard product. There are also some restrictions placed on what $\Theta$ can be since $U$ and $U'$ must be unitary. But we have the important observation that equivalence classes of unitary operators are the orbits of some group, which we now describe.
+
+Since $|U_{sf}|^2=\langle s|U|f\rangle$, we see that there are two basic operations on $U$ that preserve this norm. First is the case that $\Theta\odot U=\overline{U}$. This can be thought of as conjugation by the antiunitary operator $K_U$ in the basis of $U$. This antiunitary operator depends on choice of $U$. However, we suppress the subscript on the operator as the meaning should be clear. Otherwise, we can change each basis vector by multiplying by some complex number with unit norm. In other words, $\langle s|\Lambda_1 U\Lambda_2|f\rangle=|U_{sf}|^2$ for $\Lambda_1,\Lambda_2$ diagonal unitary matrices. It is clear that these are the only two operations on $U$ that preserve the entry-wise norms of $U$ and it unitarity.
 
 As a special case of the latter action is the case when $\Lambda_2=\Lambda_1^{-1}$. We call this the \emph{$\Lambda$-action}. The $\Lambda$-action is a change of the preferred site-basis and is what is conventionally viewed as the largest set of symmetries on the state space. However, by asking what the largest set of symmetries preserving the quantum probability current is, one achieves more symmetries in a way that is completely analogous to the methodology of analyzing time symmetry recently proposed in \cite{oreshkov2015operational}.
 
@@ -427,12 +429,18 @@ Now let $w_p(H)$ be the invariant defined by looking at the weight of the cycle 
  From Theorem \ref{thm:realinvs}, we know that either the support of $H$ is a tree, which is time-symmetric by Theorem \ref{thm:conjtoneg}, or is conjugate to a real matrix, which makes it time-symmetric.
 \end{proof}
 
-By Theorem \ref{thm:conjtoneg} and Corollary \ref{cor:realinvs}, we have that if $H$ has bipartite support or all of its invariants take real values, then $H$ defines a time-symmetric walk. We conjecture that the converse is also true.
+If one demands that two quantum walks can be equivalent only if they are related by a symmetry of the underlying Hilbert space it acts on, then we can give a complete classification of those Hamiltonians defining time-symmetric walks.
+
+\begin{corollary}
+ If we say that two Hamiltonians $H_1$ and $H_2$ define the same walk if only if $e^{-it H_1}\sim e^{-it H_2}$ and they are related only by a global phase change, complex conjugation, or the $\Lambda$-action, then a $H$ defines a walk that is time-symmetric if and only if all invariants of $H$ are real or its support is bipartite (with possible constant diagonal).
+\end{corollary}
+
+
+The restriction in the above corollary is not satisfactory and we would really wish to classify time-symmtric walks for individual Hamiltonians using the full group action. We conjecture, however, that the answer remains the same.
 
 \begin{conjecture}
  A Hamiltonian $H$ defines a time-symmetric quantum walk if and only if the support of $H$ is bipartite or all of its invariants take real values.
 \end{conjecture}
-
 
 \section{Classification of Phase-Independent Graphs}
 
